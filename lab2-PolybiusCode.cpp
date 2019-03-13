@@ -60,11 +60,11 @@ string PolybiusDecrypt(string crypted)
 
 int main(int argc, char *argv[])
 {   
-    fstream file1(argv[1], ios::in);
-    fstream file2(argv[2], ios::out);
+    fstream inputFile(argv[1], ios::in);
+    fstream outputFile(argv[2], ios::out);
 
     string text;
-    getline(file1, text);
+    getline(inputFile, text);
 
     short choice=short(*argv[3]-'0');
     switch (choice)
@@ -77,8 +77,8 @@ int main(int argc, char *argv[])
             text=PolybiusDecrypt(text);
             break;
     }
-    file2<<text;
+    outputFile<<text;
 
-    file1.close();
-    file2.close();
+    inputFile.close();
+    outputFile.close();
 }

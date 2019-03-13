@@ -41,12 +41,12 @@ void DeleteArray2D(int**array, int n_rows, int n_columns)
 
 int main()
 {
-    int n_row, n_columns;
+    int n_rows, n_columns;
     cout << "Liczba wierszy: ";
-    cin >> n_row;
+    cin >> n_rows;
     cout << "Liczba kolumn:";
     cin >> n_columns;
-    int ** array2D=Array2D(n_row,n_columns);
-    PrintingArray2D(array2D, n_row, n_columns);
-    DeleteArray2D(array2D, n_row, n_columns);
+    int ** array2D=Array2D(n_rows,n_columns);
+    PrintingArray2D(array2D, n_rows, n_columns);
+    DeleteArray2D(array2D, n_rows, n_columns);
 }
