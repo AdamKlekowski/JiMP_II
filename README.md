@@ -1,2 +1,2 @@
 # JiMP_II
-Rozwiązane zadanie z laboratoriów z JiMP II.
+Rozwiązane zadania z laboratoriów z JiMP II.
