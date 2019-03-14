@@ -1,4 +1,3 @@
-//#include <sstream>
 #include <regex>
 #include <cmath>
 #include <iostream>
@@ -69,7 +68,6 @@ int main()
     times.push_back("1:40");
     times.push_back("2:41");
     times.push_back("10:40");
-    times.push_back("20:11");
 
     std::cout << "Minimal time difference = "<< MinimalTimeDifference(times) << std::endl;
 }
