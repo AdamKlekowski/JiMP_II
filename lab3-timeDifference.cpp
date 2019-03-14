@@ -1,11 +1,12 @@
-#include <vector>
 //#include <sstream>
 #include <regex>
 #include <cmath>
 #include <iostream>
 
-using ::std::string;
+#include <vector>
 using ::std::vector;
+
+using ::std::string;
 
 unsigned int ToMinutes(string time_HH_MM)
 {
@@ -42,9 +43,9 @@ unsigned int MinimalTimeDifference(vector<string> times)
 {
     unsigned int tmp;
     vector<unsigned int> timesInMin;
-    for (int i=0; i<times.size(); i++)
+    for (auto time: times)
     {
-        tmp=ToMinutes(times.at(i));
+        tmp=ToMinutes(time);
         timesInMin.push_back(tmp);
     }
 
@@ -65,8 +66,8 @@ int main()
 {
     vector<string> times;
     times.push_back("10:00");
-    times.push_back("2:40");
-    times.push_back("11:10");
+    times.push_back("1:40");
+    times.push_back("2:41");
     times.push_back("10:40");
     times.push_back("20:11");
 
