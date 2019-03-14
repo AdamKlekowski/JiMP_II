@@ -43,7 +43,7 @@ unsigned int MinimalTimeDifference(vector<string> times)
 {
     unsigned int tmp;
     vector<unsigned int> timesInMin;
-    for (auto time: times)
+    for (auto time : times)
     {
         tmp=ToMinutes(time);
         timesInMin.push_back(tmp);
