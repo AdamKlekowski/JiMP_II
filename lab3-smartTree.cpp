@@ -4,7 +4,6 @@ using ::std::ostream;
 #include <string>
 using ::std::string;
 using ::std::to_string;
-using ::std::stoi;
 
 #include <memory>
 using ::std::unique_ptr;
@@ -64,7 +63,8 @@ string DumpTree(const unique_ptr<SmartTree>&tree)
 string getToken(const string&tree)
 {
     string token="";
-    for(static int i=0; i<tree.size(); i++)
+    static int i=0;
+    for(i; i<tree.size(); i++)
     {
         if (tree.at(i)==' ')
         {
@@ -73,6 +73,7 @@ string getToken(const string&tree)
         }
         token.push_back(tree.at(i));
     }
+    if(i==tree.size()) i=0;
     return token;
 }
 
@@ -80,19 +81,10 @@ unique_ptr<SmartTree> RestoreTree(const string&tree)
 {
     auto NewTree = make_unique<SmartTree>();
     string nextToken=getToken(tree);
-    if (nextToken.at(0) == '#') return nullptr;
-    cout << " -" << nextToken << "- ";
-    nextToken=getToken(tree);
-    cout << " -" << nextToken << "- ";
-    nextToken=getToken(tree);
-    cout << " -" << nextToken << "- ";
-    nextToken=getToken(tree);
-    cout << " -" << nextToken << "- ";
-    nextToken=getToken(tree);
-    cout << " -" << nextToken << "- ";
-    //NewTree->value= stoi(nextToken);
-    //NewTree->leftChild=RestoreTree(tree);
-    //NewTree->rightChild=RestoreTree(tree);
+    if (nextToken == "#") return nullptr;
+    NewTree=CreateLeaf(atoi(nextToken.c_str()));
+    NewTree->leftChild=RestoreTree(tree);
+    NewTree->rightChild=RestoreTree(tree);
 
     return NewTree;
 }
@@ -101,5 +93,14 @@ int main()
 {
     unique_ptr<SmartTree> tree = nullptr;
     string treeString = "30 10 50 # # # 20 45 # # 35 # #";
+
+    cout << "Tree String na początku: " << treeString << std::endl;
     tree=RestoreTree(treeString);
+    cout << "In order: ";
+    PrintTreeInOrder(tree);
+    string dumpedTree=DumpTree(tree);
+    cout << std::endl << "Dumped Tree: "<<dumpedTree << std::endl;
+    tree=RestoreTree(treeString);
+    cout << "Na koniec, po przywróceniu: ";
+    PrintTreeInOrder(tree);
 }
