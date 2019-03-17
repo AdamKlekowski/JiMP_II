@@ -14,36 +14,40 @@ using ::std::cout;
 
 struct SmartTree{
     int value;
-    unique_ptr<SmartTree> leftChild;
-    unique_ptr<SmartTree> rightChild;
+    unique_ptr<SmartTree> left;
+    unique_ptr<SmartTree> right;
 };
 
 unique_ptr<SmartTree> CreateLeaf(int value)
 {
     auto newLeaf = make_unique<SmartTree>();
     newLeaf->value=value;
-    newLeaf->leftChild=nullptr;
-    newLeaf->rightChild=nullptr;
+    newLeaf->left=nullptr;
+    newLeaf->right=nullptr;
     
     return newLeaf;
 }
-unique_ptr<SmartTree> InsertLeftChild(unique_ptr<SmartTree> tree, unique_ptr<SmartTree> left_subtree)
+
+unique_ptr<SmartTree> Insertleft(unique_ptr<SmartTree> tree, unique_ptr<SmartTree> left_subtree)
 {
-    tree->leftChild = move(left_subtree);
+    tree->left = move(left_subtree);
     return tree;
 }
-unique_ptr<SmartTree> InsertRightChild(unique_ptr<SmartTree> tree, unique_ptr<SmartTree> right_subtree)
+
+unique_ptr<SmartTree> InsertRight(unique_ptr<SmartTree> tree, unique_ptr<SmartTree> right_subtree)
 {
-    tree->leftChild = move(right_subtree);
+    tree->left = move(right_subtree);
     return tree;
 }
-void PrintTreeInOrder(const unique_ptr<SmartTree>&unique_ptr /*, ostream*out*/ )
+
+void PrintTreeInOrder(const unique_ptr<SmartTree>&unique_ptr)
 {
     if (unique_ptr==nullptr) return;
-    PrintTreeInOrder(unique_ptr->leftChild);
+    PrintTreeInOrder(unique_ptr->left);
     cout << (unique_ptr->value) << " ";
-    PrintTreeInOrder(unique_ptr->rightChild);
+    PrintTreeInOrder(unique_ptr->right);
 }
+
 string DumpTree(const unique_ptr<SmartTree>&tree)
 {
     string result;
@@ -55,11 +59,12 @@ string DumpTree(const unique_ptr<SmartTree>&tree)
     {
         result.append(to_string(tree->value));
         result.append(" ");
-        result.append(DumpTree(tree->leftChild));
-        result.append(DumpTree(tree->rightChild));
+        result.append(DumpTree(tree->left));
+        result.append(DumpTree(tree->right));
     }
     return result;
 }
+
 string getToken(const string&tree)
 {
     string token="";
@@ -83,8 +88,8 @@ unique_ptr<SmartTree> RestoreTree(const string&tree)
     string nextToken=getToken(tree);
     if (nextToken == "#") return nullptr;
     NewTree=CreateLeaf(atoi(nextToken.c_str()));
-    NewTree->leftChild=RestoreTree(tree);
-    NewTree->rightChild=RestoreTree(tree);
+    NewTree->left=RestoreTree(tree);
+    NewTree->right=RestoreTree(tree);
 
     return NewTree;
 }
@@ -93,14 +98,14 @@ int main()
 {
     unique_ptr<SmartTree> tree = nullptr;
     string treeString = "30 10 50 # # # 20 45 # # 35 # #";
-
-    cout << "Tree String na początku: " << treeString << std::endl;
     tree=RestoreTree(treeString);
+
     cout << "In order: ";
     PrintTreeInOrder(tree);
+
     string dumpedTree=DumpTree(tree);
-    cout << std::endl << "Dumped Tree: "<<dumpedTree << std::endl;
     tree=RestoreTree(treeString);
-    cout << "Na koniec, po przywróceniu: ";
+
+    cout << std::endl << "In order (po usunięciu i przywróceniu drzewa): ";
     PrintTreeInOrder(tree);
 }

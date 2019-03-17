@@ -1,11 +1,9 @@
 #include <regex>
-#include <cmath>
 #include <iostream>
+using ::std::string;
 
 #include <vector>
 using ::std::vector;
-
-using ::std::string;
 
 unsigned int ToMinutes(string time_HH_MM)
 {
