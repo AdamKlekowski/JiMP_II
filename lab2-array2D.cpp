@@ -1,6 +1,18 @@
 #include <iostream>
+using ::std::cout;
+using ::std::cin;
+using ::std::endl;
 
-using namespace std;
+void CompleteArray(int **arr, int n_rows, int n_columns)
+{
+    for (int i = 0; i<n_rows; i++)
+    {
+        for (int j=0; j<n_columns; j++)
+        {
+            arr[i][j]=i*n_columns+j+1;
+        }
+    }
+}
 
 int **Array2D(int n_rows, int n_columns)
 {
@@ -9,13 +21,7 @@ int **Array2D(int n_rows, int n_columns)
     for (int i = 0; i<n_rows; i++)
     array[i] = new int [n_columns];
 
-    for (int i = 0; i<n_rows; i++)
-    {
-        for (int j=0; j<n_columns; j++)
-        {
-            array[i][j]=i*n_columns+j+1;
-        }
-    }
+    CompleteArray(array, n_rows, n_columns);
     return array;
 }
 
