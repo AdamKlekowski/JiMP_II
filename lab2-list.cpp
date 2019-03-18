@@ -1,6 +1,6 @@
 #include <iostream>
-
-using namespace std;
+using ::std::cout;
+using ::std::endl;
 
 struct ForwardList{
     int num;
@@ -34,6 +34,7 @@ ForwardList *CreateNode(int value)
     newNode->num=value;
     return newNode;
 }
+
 void DestroyList(ForwardList *list)
 {
     while(list)
