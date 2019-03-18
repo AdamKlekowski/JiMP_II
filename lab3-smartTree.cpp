@@ -36,7 +36,7 @@ unique_ptr<SmartTree> Insertleft(unique_ptr<SmartTree> tree, unique_ptr<SmartTre
 
 unique_ptr<SmartTree> InsertRight(unique_ptr<SmartTree> tree, unique_ptr<SmartTree> right_subtree)
 {
-    tree->left = move(right_subtree);
+    tree->right = move(right_subtree);
     return tree;
 }
 
