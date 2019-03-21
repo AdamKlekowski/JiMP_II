@@ -1,3 +1,7 @@
+#pragma once
+#include <ostream>
+using ::std::ostream;
+
 class Point {
 private:
     double x, y;

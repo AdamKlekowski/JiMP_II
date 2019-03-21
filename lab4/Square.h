@@ -1,3 +1,4 @@
+#pragma once
 #include "Point.h"
 
 class Square {
@@ -7,7 +8,13 @@ private:
     Point point3;
     Point point4;
 
+    bool isSquare();
+
 public:
-double Circumference();
-double Area();
+    Square();
+    Square(Point, Point, Point, Point);
+    ~Square();
+
+    double Circumference();
+    double Area();
 };
