@@ -5,9 +5,10 @@ using ::std::pow;
 
 bool Square::isSquare()
 {
-    if (point1.Distance(point2)==point2.Distance(point3) &&
+    if (point1.Distance(point2)==point2.Distance(point3) &&   
         point2.Distance(point3)==point3.Distance(point4) &&
-        point3.Distance(point4)==point4.Distance(point1))
+        point3.Distance(point4)==point4.Distance(point1) &&  //check wheather sides are equal 
+        point1.Distance(point3)==point2.Distance(point4))  //check wheather diagonals are equal
     {
         return true;
     }
