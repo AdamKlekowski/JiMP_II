@@ -100,6 +100,7 @@ Matrix::Matrix(const Matrix &originalMatrix)
 {
     n_rows=originalMatrix.n_rows;
     n_columns=originalMatrix.n_columns;
+    allocateMemory(n_rows, n_columns);
     for (int i = 0; i<n_rows; i++)
     {
         for (int j=0; j<n_columns; j++)
