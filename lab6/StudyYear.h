@@ -1,4 +1,6 @@
-#pragma once
+#ifndef STUDYYEAR_H
+#define STUDYYEAR_H
+
 #include <istream>
 using ::std::istream;
 
@@ -27,3 +29,5 @@ public:
     friend istream& operator>> (istream&, StudyYear&);
     friend ostream& operator<< (ostream&, const StudyYear&);
 };
+
+#endif

@@ -1,4 +1,6 @@
-#pragma once
+#ifndef STUDENTREPOSITORY_H
+#define STUDENTREPOSITORY_H
+
 #include<vector>
 using ::std::vector;
 
@@ -15,3 +17,5 @@ public:
     void Print();
     void LoadDataBaseFromFile(string);
 };
+
+#endif
