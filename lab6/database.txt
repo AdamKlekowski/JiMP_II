@@ -1,0 +1,10 @@
+{"3001", "Adam", "Kowalski", "IT", 1}
+{"3002", "Krzysztof", "Nowakowski", "IT", 1}
+{"3003", "Stanislaw", "Kowalski", "Economics", 1}
+{"3004", "Lukasz", "Kowalski", "IT", 1}
+{"3005", "Michal", "Nowak", "Law", 2}
+{"3006", "Kamil", "Kowalski", "Law", 5}
+{"3007", "Bartłomiej", "Kowalczyk", "IT", 1}
+{"3008", "Piotr", "Kowalski", "PE", 2}
+{"3009", "Marcin", "Wójcik", "Physics", 4}
+{"3010", "Jakub", "Kowalczyk", "IT", 4}
