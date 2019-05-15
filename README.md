@@ -1,13 +1,13 @@
 ## Tematy laboratoriów
-* ![lab1](https://github.com/AdamKlekowski/JiMP_II/tree/master/lab1) - Wprowadzenie do programowania w C++
-* ![lab2](https://github.com/AdamKlekowski/JiMP_II/tree/master/lab2) - Dynamiczne zarządzanie pamięcią i operacje na plikach I
-* ![lab3](https://github.com/AdamKlekowski/JiMP_II/tree/master/lab3) - Dynamiczne zarządzanie pamięcią i operacje na plikach II
-* ![lab4](https://github.com/AdamKlekowski/JiMP_II/tree/master/lab4) - Klasy i obiekty I
+* ![lab01](https://github.com/AdamKlekowski/JiMP_II/tree/master/lab01) - Wprowadzenie do programowania w C++
+* ![lab02](https://github.com/AdamKlekowski/JiMP_II/tree/master/lab02) - Dynamiczne zarządzanie pamięcią i operacje na plikach I
+* ![lab03](https://github.com/AdamKlekowski/JiMP_II/tree/master/lab03) - Dynamiczne zarządzanie pamięcią i operacje na plikach II
+* ![lab04](https://github.com/AdamKlekowski/JiMP_II/tree/master/lab04) - Klasy i obiekty I
 * ![kolokwium1](https://github.com/AdamKlekowski/JiMP_II/tree/master/kolokwium1)
-* ![lab5](https://github.com/AdamKlekowski/JiMP_II/tree/master/lab5) - Klasy i obiekty II
-* ![lab6](https://github.com/AdamKlekowski/JiMP_II/tree/master/lab6) - Przeciążenie operatorów
-* ![lab7](https://github.com/AdamKlekowski/JiMP_II/tree/master/lab7) - Dziedziczenie i polimorfizm I
-* ![lab8](https://github.com/AdamKlekowski/JiMP_II/tree/master/lab8) - Wyjątki
-* ![lab9](https://github.com/AdamKlekowski/JiMP_II/tree/master/lab9) - Dziedziczenie i polimorfizm II
+* ![lab05](https://github.com/AdamKlekowski/JiMP_II/tree/master/lab05) - Klasy i obiekty II
+* ![lab06](https://github.com/AdamKlekowski/JiMP_II/tree/master/lab06) - Przeciążenie operatorów
+* ![lab07](https://github.com/AdamKlekowski/JiMP_II/tree/master/lab07) - Dziedziczenie i polimorfizm I
+* ![lab08](https://github.com/AdamKlekowski/JiMP_II/tree/master/lab08) - Wyjątki
+* ![lab09](https://github.com/AdamKlekowski/JiMP_II/tree/master/lab09) - Dziedziczenie i polimorfizm II
 * ![kolokwium2](https://github.com/AdamKlekowski/JiMP_II/tree/master/kolokwium2)
 * ![lab10](https://github.com/AdamKlekowski/JiMP_II/tree/master/lab10) - Szablony
