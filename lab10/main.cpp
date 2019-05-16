@@ -7,7 +7,7 @@
 #include "IndexInUseException.h"
 
 template <class T>
-void useQuery(const ByNameQuery &query, Repository<T> &repository)
+void useQuery(const ByNameQuery &query, const Repository<T> &repository)
 {   
     std::vector<T> queryResult (repository.FindBy(query));
 
@@ -24,8 +24,8 @@ int main()
     //----- class Student -----
     Repository<Student> studentRepository;
     Student AGH_student("AGH01", "Adam", "Klekowski", "EAIiIB");
-    Student UJ_student("UJ01", "Elon", "Musk", "-");
-    Student PK_student("PK01", "Steve", "Jobs", "-");
+    Student UJ_student("UJ01", "Elon", "Musk", "FiIT");
+    Student PK_student("PK01", "Steve", "Jobs", "FiIS");
 
     try{
         studentRepository.Append(AGH_student);
