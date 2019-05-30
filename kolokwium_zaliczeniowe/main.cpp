@@ -24,8 +24,7 @@ int main()
     std::cout << student;
     Osoba unkownPerson;
     std::cin >> unkownPerson;
-    if (student==unkownPerson) std::cout << "Persons are the same" << std::endl;
-
+    if (student==unkownPerson) std::cout << "People are the same" << std::endl;
 
     //Insurance
     Insurance *unkownInsurance=new Car();
