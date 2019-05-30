@@ -5,9 +5,6 @@
 #include "IndexInUseException.h"
 #include "NotFoundException.h"
 
-#include "Student.h"
-#include "Employee.h"
-
 template <class T>
 T Repository<T>::operator[] (const std::string index) const
 {
@@ -53,9 +50,7 @@ std::vector<T> Repository<T>::FindBy(const ByNameQuery &query) const
     return queryResult;
 }
 
-#include "Repository.h"
 #include "Student.h"
 #include "Employee.h"
-
 template class Repository <Employee>;
 template class Repository <Student>;
