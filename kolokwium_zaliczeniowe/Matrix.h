@@ -35,8 +35,8 @@ public:
 
     void setAt(int rowIndex, int columnIndex, T t)
     {
-        if(rowIndex>n_rows) throw InvalidElementPositionException(rowIndex);
-        else if(columnIndex>n_columns) throw InvalidElementPositionException(columnIndex);
+        if(rowIndex<=0 || rowIndex>n_rows) throw InvalidElementPositionException(rowIndex);
+        else if(columnIndex<=0 || columnIndex>n_columns) throw InvalidElementPositionException(columnIndex);
         matrix[rowIndex][columnIndex]=t;
     }
 };
