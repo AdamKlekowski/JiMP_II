@@ -1,5 +1,5 @@
 |      | Temat laboratoriów |
-| :------------- | :----------: |
+| :------------- | :---------- |
 | ![lab01](https://github.com/AdamKlekowski/JiMP_II/tree/master/lab01) | Wprowadzenie do programowania w C++ |
 | ![lab02](https://github.com/AdamKlekowski/JiMP_II/tree/master/lab02) | Dynamiczne zarządzanie pamięcią i operacje na plikach I |
 | ![lab03](https://github.com/AdamKlekowski/JiMP_II/tree/master/lab03) | Dynamiczne zarządzanie pamięcią i operacje na plikach II |
